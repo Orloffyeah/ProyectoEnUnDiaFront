@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Geocode from 'react-geocode'
+//import Geocode from 'react-geocode'
 
 // Assets
 import { BASE_URL } from '../../js/assets'
@@ -133,7 +133,7 @@ class UpdateProfile extends Component {
    })
   }
 
-  getReverseGeocodingData(lat, lng) {
+  /*getReverseGeocodingData(lat, lng) {
      Geocode.fromLatLng(lat, lng).then(
      response => {
        const address = response.results[0].address_components[3].long_name
@@ -144,7 +144,7 @@ class UpdateProfile extends Component {
        console.error(error)
      }
    )
-  }
+  }*/
 
   render(){
     const { username, email, location, avatarL } = this.props
