@@ -1,0 +1,67 @@
+$primary-color: #f5f5f5;
+$primary-color-light: #ffffff;
+$primary-color-dark: #c2c2c2;
+
+$secondary-color: #ff7c0a;
+$secondary-color-light: #ffad46;
+$secondary-color-dark: #c54d00;
+
+$background-color: #f5f5f5;
+
+.brand-logo, nav ul a {
+  color: black !important;
+}
+
+.primary-color{
+  background-color: $primary-color !important;
+  color: black !important;
+}
+
+.primary-color-light {
+  background-color: $primary-color-light !important;
+  color: black !important;
+}
+
+.primary-color-dark {
+  background-color: $primary-color-dark !important;
+  color: black !important;
+}
+
+.primary-color-text {
+  color: $primary-color !important;
+}
+
+.primary-color-light-text {
+  color: $primary-color-light !important;
+}
+
+.primary-color-dark-text {
+  color: $primary-color-dark !important;
+}
+
+.secondary-color{
+  background-color: $secondary-color !important;
+  color: black !important;
+}
+
+.secondary-color-light {
+  background-color: $secondary-color-light !important;
+  color: black !important;
+}
+
+.secondary-color-dark {
+  background-color: $secondary-color-dark !important;
+  color: white;
+}
+
+.secondary-color-text {
+  color: $secondary-color !important;
+}
+
+.secondary-color-light-text {
+  color: $secondary-color-light !important;
+}
+
+.secondary-color-dark-text {
+  color: $secondary-color-dark !important;
+}

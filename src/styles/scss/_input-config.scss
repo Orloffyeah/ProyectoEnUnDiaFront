@@ -1,0 +1,34 @@
+.input-field label {
+  color: black !important;
+}
+
+.input-field input:focus + label {
+  color: $secondary-color !important;
+}
+
+.input-field input:focus {
+  border-bottom: 1px solid $secondary-color !important;
+  box-shadow: 0 1px 0 0 $secondary-color !important;
+}
+
+.input-field .prefix.active {
+  color: $secondary-color !important;
+}
+
+.input-field textarea:focus {
+  border-bottom: 1px solid $secondary-color !important;
+  box-shadow: 0 1px 0 0 $secondary-color !important;
+}
+
+.chips.chips-autocomplete {
+  &.focus {
+    border-bottom-color: $secondary-color !important;
+    box-shadow: 0 1px 0 0 $secondary-color !important;
+  }
+  margin-bottom: 0;
+}
+
+.chip.selected {
+  @extend .secondary-color;
+  color: white !important;
+}

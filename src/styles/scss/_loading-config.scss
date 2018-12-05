@@ -1,0 +1,15 @@
+.spinner-blue, .spinner-blue-only {
+  border-color: $secondary-color !important;
+}
+
+.loading-space {
+  position: relative;
+  width: 100%;
+}
+
+.center-loading{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

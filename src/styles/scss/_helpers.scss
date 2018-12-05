@@ -1,0 +1,181 @@
+html, body, div#root {
+  height: 100%;
+  width: 100%;
+  // background-color: $background-color;
+}
+
+.no-hover{
+  color: black !important;
+  &:hover{
+    color: $secondary-color !important;
+  }
+}
+
+.breadcrumb {
+  color: black !important;
+  &::before{
+    color: $primary-color-dark !important;
+    vertical-align: middle !important;
+  }
+}
+
+.collection a:not(.no-hover),
+.side-nav a:not(.no-hover),
+#nav-mobile a:not(.no-hover){
+  color: black !important;
+  &:hover {
+    @extend .secondary-color-light;
+  }
+}
+
+div#root > div{
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+}
+
+main {
+  min-height: calc(100% - 110px);
+}
+
+footer {
+  width: 100%;
+  @extend .primary-color-dark;
+  * {
+    color: black !important;
+  }
+}
+
+.form-panel{
+  position: absolute;
+  margin: 0px !important;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer-copyright .container a {
+  margin: 0 8px;
+  background-color: inherit !important;
+}
+
+.tabs .indicator {
+  height: 3px !important;
+  background-color: $secondary-color-light !important;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+@media only screen and (max-width: 375px){
+  .big-title {
+    font-size: 150px;
+  }
+}
+
+@media only screen and (min-width: 376px){
+  .big-title {
+    font-size: 225px;
+  }
+}
+
+.gameImage {
+  height: 64px;
+}
+
+.leftText {
+  margin-left: 16px;
+}
+
+.max-height{
+  height: 100%;
+}
+
+.clickable {
+  cursor: pointer;
+  &:hover {
+    background-color: $secondary-color-light !important;
+  }
+}
+
+.recharts-wrapper{
+  margin: 0 auto !important;
+  li.clickable {
+    cursor: pointer;
+  }
+}
+
+ul.autocomplete-content {
+  position: absolute !important;
+  min-width: 278px;
+  margin-top: 0;
+}
+
+.parallax-container {
+  display: flex;
+  height: 375px !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
+  h2, #pgp-button {
+    align-self: flex-end;
+    margin: 25px auto;
+  }
+}
+
+.brand-logo img {
+  margin-right: 8px;
+  width: 45px;
+  vertical-align: middle;
+}
+
+.l-panel {
+  height: 320px;
+
+}
+
+.l-img img {
+  height: 80%;
+  width: auto;
+  object-fit: cover;
+}
+
+.l-img{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  height: 320px;
+}
+.vertical-center{
+  margin-top: 32px;
+  vertical-align: middle;
+}
+
+.sponsor-img {
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.sponsor-img:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+.paddedAd{
+  padding-top: 2px;
+  padding-right: 2px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+}
+
+// .sponsorList{
+//   background: lightgrey;
+// }
