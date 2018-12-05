@@ -69,7 +69,6 @@ class Dashboard extends Component {
             <div className="center-align">
               <h5>Sponsored Content</h5>
             </div>
-            <AdList/>
           </div>
           <div className="col s12 m9 l10">
             { content }

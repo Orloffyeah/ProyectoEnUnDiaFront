@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import Mail from './Mail'
 import MailsList from './MailsList'
 import MailCompose from './MailCompose'
-import AdList from '../ads/AdList'
+//import AdList from '../ads/AdList'
 
 class Mailbox extends Component {
 
@@ -72,7 +72,6 @@ class Mailbox extends Component {
             <div className="center-align">
               <h5>Sponsored Content</h5>
             </div>
-            <AdList/>
           </div>
           <div className="col s12 m9 l10">
             { content }
