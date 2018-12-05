@@ -127,7 +127,7 @@ class SignIn extends Component {
                     <label htmlFor="password">Password</label>
                   </div>
                   { errorMessage }
-                  <div className="gwd-reCAPTCHA_2">
+                  <div className="captcha">
                   <Recaptcha
                     sitekey="6LcJD38UAAAAAGWDkwaNGtSZQLiLyQ09IxgcJkU4"
                     render="explicit"

@@ -1,6 +1,11 @@
 .brand-logo, nav ul a {
   color: black !important; }
 
+.captcha {
+  transform: scale(0.84);
+  transform-origin: 0 0;
+}
+
 .primary-color {
   background-color: #f5f5f5 !important;
   color: black !important; }
@@ -250,7 +255,3 @@ figure.back_image > img {
   overflow: hidden;
   transform: scale(1.03); }
 
-.gwd-reCAPTCHA_2   {
-    transform: scale(0.84);
-    transform-origin: 0 0;
-   }
