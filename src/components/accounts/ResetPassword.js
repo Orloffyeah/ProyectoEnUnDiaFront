@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 // Assets
-import login_img from '../../assets/login_image.jpg'
+import login_img from '../../assets/login_img.jpg'
 
 class ResetPassword extends Component {
 

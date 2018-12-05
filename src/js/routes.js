@@ -1,5 +1,6 @@
 import SignUp from '../components/accounts/SignUp'
 import SignIn from '../components/accounts/SignIn'
+import RecoverPass from '../components/accounts/ResetPassword'
 import Home from '../components/home/Home'
 import NotFound from '../components/helpers/NotFound'
 import Game from '../components/game/Game'
@@ -39,6 +40,9 @@ const ROUTES = [
   { component: SignUp,
     path: '/register',
     redirect: { when: 'LOGED_IN', to: '/dashboard/news' }
+  },
+	{ component: RecoverPass,
+    path: '/resetpassword'
   },
   { component: Game,
     path: '/game/:gameId',

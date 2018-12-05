@@ -16,7 +16,7 @@ class UpdateProfile extends Component {
       location: 0
     }
 
-    this.getReverseGeocodingData = this.getReverseGeocodingData.bind(this)
+    //this.getReverseGeocodingData = this.getReverseGeocodingData.bind(this)
   }
 
   componentDidMount(){
