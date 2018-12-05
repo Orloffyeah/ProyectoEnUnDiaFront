@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import Recaptcha from 'react-recaptcha';
 // Assests
 import store from '../../js/store'
 import { POST } from '../../js/requests'
@@ -17,9 +17,11 @@ class SignUp extends Component{
       eqPass: null,
       status: null,
       logginIn: false,
+      captcha:false
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.verifyCallback = this.verifyCallback.bind(this);
   }
 
   initSelect(){
@@ -36,6 +38,7 @@ class SignUp extends Component{
   }
 
   handleSubmit( event ){
+    if(this.state.captcha==true){
     event.preventDefault()
     this.setState({ logginIn: true })
     const profile = {
@@ -73,12 +76,21 @@ class SignUp extends Component{
       }
     )
   }
+}
 
   handleChange(event){
     const password = document.getElementById("password").value
     const cpass = event.target.value
     var eqPass = cpass === password
     this.setState({ eqPass })
+  }
+
+  verifyCallback(response) {
+    if (response) {
+      this.setState({
+        captcha: true
+      })
+    }
   }
 
   render(){
@@ -132,6 +144,13 @@ class SignUp extends Component{
                   <label htmlFor="cpass">Confirm Password</label>
                 </div>
                 { equalPass }
+                <div className="gwd-reCAPTCHA_2">
+                  <Recaptcha
+                    sitekey="6LcJD38UAAAAAGWDkwaNGtSZQLiLyQ09IxgcJkU4"
+                    render="explicit"
+                    verifyCallback={this.verifyCallback}
+                  />
+                  </div>
                 <button className="btn waves-effect waves-orange primary-color"
                 type="submit">Sign Up</button>
               </form>
