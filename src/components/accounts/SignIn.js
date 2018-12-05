@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import Recaptcha from 'react-recaptcha';
 // Assets
 import store from '../../js/store'
 import { login } from '../../js/actions'
@@ -16,8 +16,11 @@ class SignIn extends Component {
     super(props)
     this.state = {
       error: false,
-      logginIn: false
+      logginIn: false,
+      captcha:false
     }
+
+    this.verifyCallback = this.verifyCallback.bind(this);
   }
 
   componentDidMount() {
@@ -25,7 +28,7 @@ class SignIn extends Component {
   }
 
   handleSubmit(event) {
-
+    if(this.state.captcha==true){
     event.preventDefault()
     this.setState({ logginIn: true })
     const email = document.getElementById('email').value
@@ -53,7 +56,7 @@ class SignIn extends Component {
       }
     )
   }
-
+}
   responseGoogle = (response) => {
     this.setState({ logginIn: true })
     const data = {id_token: response.Zi.id_token }
@@ -72,6 +75,13 @@ class SignIn extends Component {
         })
       }
     )
+  }
+  verifyCallback(response) {
+    if (response) {
+      this.setState({
+        captcha: true
+      })
+    }
   }
 
   render() {
@@ -117,6 +127,11 @@ class SignIn extends Component {
                     <label htmlFor="password">Password</label>
                   </div>
                   { errorMessage }
+                  <Recaptcha
+                    sitekey="6LcJD38UAAAAAGWDkwaNGtSZQLiLyQ09IxgcJkU4"
+                    render="explicit"
+                    verifyCallback={this.verifyCallback}
+                  />
                   <button className="waves-effect waves-orange btn primary-color" style={{"marginBottom": "20px"}}>Sign In</button>
                   <GoogleLogin
                       clientId="544479097367-vsgksn1j0h4p6kv9glqhq6h6pffbs5l4.apps.googleusercontent.com"
