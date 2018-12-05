@@ -127,11 +127,13 @@ class SignIn extends Component {
                     <label htmlFor="password">Password</label>
                   </div>
                   { errorMessage }
+                  <div className="gwd-reCAPTCHA_2">
                   <Recaptcha
                     sitekey="6LcJD38UAAAAAGWDkwaNGtSZQLiLyQ09IxgcJkU4"
                     render="explicit"
                     verifyCallback={this.verifyCallback}
                   />
+                  </div>
                   <button className="waves-effect waves-orange btn primary-color" style={{"marginBottom": "20px"}}>Sign In</button>
                   <GoogleLogin
                       clientId="544479097367-vsgksn1j0h4p6kv9glqhq6h6pffbs5l4.apps.googleusercontent.com"

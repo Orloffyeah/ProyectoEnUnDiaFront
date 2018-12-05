@@ -249,3 +249,8 @@ figure.back_image > img {
   object-fit: cover;
   overflow: hidden;
   transform: scale(1.03); }
+
+.gwd-reCAPTCHA_2   {
+    transform: scale(0.84);
+    transform-origin: 0 0;
+   }
