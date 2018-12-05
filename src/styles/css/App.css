@@ -181,6 +181,10 @@ ul.autocomplete-content {
   padding-bottom: 2px;
   padding-left: 2px; }
 
+.captcha {
+  transform: scale(0.84);
+  transform-origin: 0 0; }
+
 .input-field label {
   color: black !important; }
 
@@ -249,7 +253,3 @@ figure.back_image > img {
   object-fit: cover;
   overflow: hidden;
   transform: scale(1.03); }
-.captcha {
-  transform: scale(0.84);
-  transform-origin: 0 0;
-}
